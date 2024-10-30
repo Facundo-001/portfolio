@@ -80,3 +80,35 @@ function updateCubo() {
 
 // Inicia la actualización
 updateCubo();
+
+
+new Vue({
+    el: '#app',
+    data() {
+      return {
+        cards: [
+          {
+            imgSrc: "https://www.clarin.com/2021/03/23/ryogfOKoy_720x0__1.jpg",
+            altText: "Card 1 Image",
+            title: "Mi Discord",
+            text: "Mi nombre de usuario es ····",
+            link: "#"
+          },
+          {
+            imgSrc: "https://ax-blog.axarnet.dev/blog/images/blog/2022/gestores-de-correo-electronico/gmail-logo.jpg",
+            altText: "Card 2 Image",
+            title: "Gmail",
+            text: "Mi correo electronico es facundo2021xd@gmail.com",
+            link: "#"
+          },
+          {
+            imgSrc: "https://1000marcas.net/wp-content/uploads/2020/01/LinkedIn-Logo-2011.jpg",
+            altText: "Card 3 Image",
+            title: "Mi perfil de linkedIn",
+            text: "Espero que me puedas contactar",
+            link: "#"
+          }
+        ]
+      };
+    }
+  });

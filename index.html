@@ -61,15 +61,36 @@
                         </div><!-- termina espacio 3d -->
                 </div>
             </main>
-        </div>
-        <div>
-
+            <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4 text-white bg-dark">
+                    <h2 class="DynaLetra text-center pt-3" style="color: #34ffbb; text-shadow: 0 0 10px #34ffbb;">
+                    Puedes contactarme en
+                    </h2>
+                    <div class="d-flex justify-content-center flex-row">
+                    <div id="app" class="d-flex flex-wrap justify-content-center">
+                        <!-- Aquí va el v-for para generar las tarjetas dinámicamente -->
+                        <div 
+                        class="card text-center mx-2 my-3" 
+                        v-for="(card, index) in cards" 
+                        :key="index" 
+                        style="width: 18rem;"
+                        >
+                        <img :src="card.imgSrc" class="card-img-top" :alt="card.altText">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ card.title }}</h5>
+                            <p class="card-text">{{ card.text }}</p>
+                            <a :href="card.link" class="btn btn-primary">Ir al enlace</a>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <footer>
 
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
