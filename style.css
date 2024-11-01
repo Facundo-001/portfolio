@@ -125,61 +125,68 @@ aside.cara6 { /* arriba */
 /* Projectos */
 
 /* Estilos del contenedor de proyectos */
-.projects-container {
+/* .proyectos {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
     justify-content: center;
-}
+    padding: 20px;
+} */
 
-/* Estilos de la tarjeta de cada proyecto */
-.project-card {
-    background-color: #ffffff;
+.tarjeta {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
     width: 300px;
     text-align: center;
-    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
 }
 
-.project-card:hover {
+.tarjeta:hover {
     transform: scale(1.05);
 }
 
-/* Imagen del proyecto */
-.project-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.tarjeta h3 {
+    margin-top: 0;
 }
 
-/* Título y descripción */
-.project-title {
-    font-size: 1.5em;
-    margin: 10px 0;
-    color: #333;
-}
-
-.project-description {
-    padding: 0 10px;
-    font-size: 1em;
-    color: #666;
-}
-
-/* Enlace para ver más */
-.project-link {
+.tarjeta a {
     display: inline-block;
-    margin: 15px 0;
-    padding: 10px 20px;
-    background-color: #0069d9;
-    color: #ffffff;
-    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px 15px;
+    color: #00ccff;
     text-decoration: none;
-    transition: background-color 0.3s;
+    border: 1px solid #00ccff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.project-link:hover {
-    background-color: #0056b3;
+.tarjeta a:hover {
+    background-color: #00ccff;
+    color: #ffffff;
+}
+
+.projecto-neon{
+    border: 2px solid #0077ff;
+    box-shadow: 0 0 10px #2e90ff, 0 0 15px #0077ff;
+    text-shadow: 0 0 10px #00ccff;
+    color: #24bce2;
+    background-color: #111;
+}
+
+.projecto-alimento{
+    background-color: #ab5ec9;
+    text-shadow: 0 0 0 10px #fff;
+    border: 1px solid #723b88;
+    color: #fff;
+}
+
+.projecto-alimento h5{
+    background-color: #682185;
+    font-weight: 800;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
