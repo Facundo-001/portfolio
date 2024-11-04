@@ -104,6 +104,18 @@ aside.cara6 { /* arriba */
     transform: rotateX(90deg) translateZ(175px);
 }
     
+/* filtro brillo */
+.icono-gatito {
+    width: 150px; /* Ajusta el tamaño si quieres */
+    filter: brightness(1) drop-shadow(0 0 10px #00ff00); /* Brillo inicial y sombra verde */
+    transition: filter 0.3s ease; /* Transición suave */
+}
+
+/* Efecto al pasar el ratón */
+.icono-gatito:hover {
+    filter: brightness(1.5) drop-shadow(0 0 15px #00ff00); /* Más brillo y sombra al hover */
+}
+/* final brillo */
 /* @keyframes gira {
     0% {
         transform: translateZ(-150px) rotateY(0deg);
