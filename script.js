@@ -111,5 +111,27 @@ new Vue({
           }
         ]
       };
+
     }
   });
+
+// Script para abrir y cerrar el menú de ajustes
+document.getElementById('menu-toggle').addEventListener('click', function() {
+  const menuAjustes = document.getElementById('menu-ajustes');
+  const fondoModal = document.getElementById('fondo-modal');
+  if (menuAjustes.style.display === 'none' || menuAjustes.style.display === '') {
+      menuAjustes.style.display = 'block'; // Mostrar el menú
+      fondoModal.style.display = 'block'; // Activar fondo difuso
+  } else {
+      menuAjustes.style.display = 'none'; // Ocultar el menú
+      fondoModal.style.display = 'none'; // Desactivar fondo difuso
+  }
+});
+
+// Script para cerrar el menú de ajustes cuando se presiona el botón de "Cerrar"
+document.getElementById('close-ajustes').addEventListener('click', function() {
+  const menuAjustes = document.getElementById('menu-ajustes');
+  const fondoModal = document.getElementById('fondo-modal');
+  menuAjustes.style.display = 'none'; // Ocultar el menú
+  fondoModal.style.display = 'none'; // Desactivar fondo difuso
+});

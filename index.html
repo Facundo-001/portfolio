@@ -30,6 +30,35 @@
         </div>
     </nav>
 
+<!-- Filtro de fondo para simular modal -->
+<div id="fondo-modal" class="fondo-modal"></div>
+
+<!-- Menú de Ajustes Central (Ventana Emergente) -->
+<div id="menu-ajustes" class="menu-ajustes p-4 bg-dark text-white position-fixed top-50 start-50 translate-middle w-75 rounded-3 shadow-lg" style="display: none; z-index: 1050;">
+    <h4 class="menu-ajustes-titulo text-center mb-4 text-primary">Ajustes</h4>
+    <div class="d-flex flex-row">
+        <ul class="menu-ajustes-opciones list-unstyled w-50 pe-3">
+            <li><a href="#" class="menu-ajustes-enlace text-white py-2 px-3 rounded d-block mb-2">Ajustes Generales</a></li>
+            <li><a href="#" class="menu-ajustes-enlace text-white py-2 px-3 rounded d-block mb-2">Privacidad</a></li>
+            <li><a href="#" class="menu-ajustes-enlace text-white py-2 px-3 rounded d-block mb-2">Notificaciones</a></li>
+            <li><a href="#" class="menu-ajustes-enlace text-white py-2 px-3 rounded d-block mb-2">Cuenta</a></li>
+            <li><a href="#" class="menu-ajustes-enlace text-white py-2 px-3 rounded d-block mb-2">Cerrar sesión</a></li>
+        </ul>
+        <div class="menu-ajustes-resultados w-50 border-start border-white ms-3 ps-3">
+            <h5 class="text-secondary mb-3">Zona de resultados</h5>
+            <div id="results text-white">
+                <p>Modo oscuro <input type="checkbox" name="" id=""></p>
+                <!-- Aquí aparecerán los resultados -->
+                <p class="text-muted">Selecciona una opción para ver los resultados aquí.</p>
+            </div>
+        </div>
+    </div>
+    <button id="close-ajustes" class="menu-ajustes-cerrar btn btn-outline-light mt-4 d-block mx-auto">Cerrar</button>
+</div>
+
+    <div class=""></div>
+
+
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar -->
@@ -51,12 +80,12 @@
                             <a class="nav-link text-white" href="#projectos">Proyectos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Ajustes(no activo)</a>
+                            <button class="nav-link text-white" id="menu-toggle" >Ajustes</button>
                         </li>
                     </ul>
                 </div>
             </div>
-            
+
             <!-- Contenido principal -->
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 text-white fondo-programador" id="home">
                 <h1 class="DynaLetra text-center pt-3">Bienvenido a mi portfolio</h1>

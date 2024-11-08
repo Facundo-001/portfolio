@@ -202,3 +202,213 @@ aside.cara6 { /* arriba */
     padding: 0;
     margin: 0;
 }
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px; /* Ajusta el tamaño */
+}
+
+.input-field {
+    margin-bottom: 20px; /* Espacio entre el input y los botones */
+}
+
+.button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-primary {
+    background-color: #007bff; /* Color más vibrante */
+    color: white;
+}
+
+.button-primary:hover {
+    background-color: #0056b3; /* Efecto hover */
+}
+
+/* Estilo para ocultar el menú inicialmente */
+/* Estilo para el fondo difuso que cubre la pantalla */
+.fondo-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro */
+    backdrop-filter: blur(5px); /* Desenfoque de fondo */
+    display: none;
+    z-index: 1040; /* Queda detrás de la ventana emergente */
+}
+
+/* Estilo para la ventana modal (ajustes) */
+/* Fondo oscuro con opacidad */
+#settingsMenu {
+    display: none; /* Para ocultar el menú por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    z-index: 1050; /* Asegurarnos de que esté por encima de otros elementos */
+}
+
+/* Contenedor principal del menú de ajustes */
+/* Estilo para la sección de ajustes */
+.menu-ajustes {
+    display: none; /* Ocultar por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    max-width: 800px; /* Tamaño máximo */
+    background-color: #343a40; /* Fondo oscuro */
+    color: white;
+    border-radius: 15px;
+    z-index: 1050; /* Asegurar que esté sobre otros elementos */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra elegante */
+}
+
+/* Título principal */
+.menu-ajustes-titulo {
+    color: #007bff; /* Color atractivo para el título */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Lista de opciones */
+.menu-ajustes-opciones {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px;
+    overflow-y: auto; /* Desplazamiento si la lista es muy larga */
+}
+
+.menu-ajustes-enlace {
+    text-decoration: none;
+    color: #f8f9fa; /* Color claro para el texto */
+    display: block;
+    padding: 12px 18px;
+    margin-bottom: 10px;
+    background-color: #495057; /* Fondo gris para cada opción */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efecto suave de hover */
+}
+
+.menu-ajustes-enlace:hover {
+    background-color: #007bff; /* Fondo azul cuando se pasa el ratón */
+    transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+/* Zona de resultados */
+.menu-ajustes-resultados {
+    background-color: #212529;
+    border-left: 2px solid white;
+    padding-left: 20px;
+    height: 100%;
+}
+
+.menu-ajustes-resultados h5 {
+    font-size: 1.25rem;
+    color: #ced4da; /* Color para el subtítulo */
+    font-weight: bold;
+}
+
+/* Resultados de búsqueda */
+#results {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #adb5bd; /* Gris claro para los textos */
+}
+
+#results p {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* Botón para cerrar */
+.menu-ajustes-cerrar {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.menu-ajustes-cerrar:hover {
+    background-color: #007bff; /* Fondo azul al pasar el ratón */
+    color: #fff; /* Mantener texto blanco */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .menu-ajustes {
+        width: 90%;
+    }
+
+    .menu-ajustes-opciones {
+        padding-left: 20px;
+    }
+
+    .menu-ajustes-resultados {
+        padding-left: 15px;
+    }
+}
+
+.menu-ajustes-cerrar:hover {
+    background-color: #007bff; /* Fondo azul al pasar el ratón */
+    color: #fff;
+}
+
+.menu-ajustes-cerrar:focus {
+    outline: none; /* Eliminar borde al hacer clic */
+}
+
+/* Estilos de transiciones */
+.transicion-suave {
+    transition: all 0.3s ease; /* Para animar todos los cambios de estilo */
+}
+
+/* Efectos de fondo y hover para la tarjeta */
+.tarjeta:hover {
+    transform: scale(1.05) rotate(3deg); /* Agregar leve rotación */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Efecto de sombra al pasar el ratón */
+}
+
+/* Estilo para las imágenes dentro de la tarjeta de proyecto */
+.tarjeta img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Ajustes de tipografía para los textos dentro de las tarjetas */
+.tarjeta h3, .tarjeta p {
+    font-family: 'Arial', sans-serif;
+    color: #ddd;
+}
+
+/* Barra de desplazamiento personalizada */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+
